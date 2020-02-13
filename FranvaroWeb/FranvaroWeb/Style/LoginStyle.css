@@ -1,0 +1,45 @@
+﻿body {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+#imgBackground {
+    height: 969px;
+    top: -15px;
+    margin: 0%;
+    padding: 0px;
+    float: left;
+}
+
+#loginBar {
+    position: absolute;
+    left: 56%;
+    top: 24%;
+}
+
+#LoggaIn {
+    font-size: 65px;
+    font-family: Segoe UI;
+    font-weight: bold;
+    color: #303030;
+}
+
+#HR-Line {
+    border: 1.2px solid #67F9EA;
+    width: 280px;
+    float: left;
+    position: absolute;
+    top: 150px;
+}
+
+.loginRuta {
+    border: none;
+    height: 70px;
+    width: 700px;
+    box-shadow: 0px 5px 1px #67F9EA,0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: Segoe UI;
+    color: black;
+    font-size: 20px;
+    padding-left: 10px;
+}

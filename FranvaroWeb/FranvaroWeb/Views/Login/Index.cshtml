@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Style/LoginStyle.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+
+<body>
+    <img id="imgBackground" src="~/Images/BackBild.png" alt="Bakgrundsbild" />
+
+
+    <div id="loginBar">
+        <p id="LoggaIn">Logga In</p>
+        <hr id="HR-Line" />
+        @using (Html.BeginForm("Index", "Login"))
+        {
+            <p>@Html.TextBox("ansID", null, new { placeholder = "Username", @class = "loginRuta" })</p>
+            <p>@Html.TextBox("Password", null, new { placeholder = "Password", @class = "loginRuta" })</p>
+            <input type="submit" value="Logga in" />
+        }
+    </div>
+</body>
+</html>

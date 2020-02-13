@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:62420/AnmalanService1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/E_projektService3" />
+  <xs:element name="getAnmalan">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAnmalanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/E_projektService3" minOccurs="0" name="getAnmalanResult" nillable="true" type="q1:ArrayOfFranvaroDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStatusLista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStatusListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/E_projektService3" minOccurs="0" name="getStatusListaResult" nillable="true" type="q2:ArrayOfStatusLista" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpecificAnmalan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpecificAnmalanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/E_projektService3" minOccurs="0" name="getSpecificAnmalanResult" nillable="true" type="q3:ArrayOfFranvaroDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sparaStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fNamn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="eNamn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Telefonnummer" type="xs:int" />
+        <xs:element minOccurs="0" name="epost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Anstallningsid" type="xs:int" />
+        <xs:element minOccurs="0" name="franVaroOrsak" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="datum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sparaStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sparaStatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

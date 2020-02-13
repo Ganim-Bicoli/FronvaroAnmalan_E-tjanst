@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/E_projektService3" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/E_projektService3" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFranvaroDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FranvaroDB" nillable="true" type="tns:FranvaroDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFranvaroDB" nillable="true" type="tns:ArrayOfFranvaroDB" />
+  <xs:complexType name="FranvaroDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnstallningsID" type="xs:int" />
+      <xs:element minOccurs="0" name="Datum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="E_post" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FranvaroOrsak" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferensID" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefonnummer" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Tid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="eNamn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fNamn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FranvaroDB" nillable="true" type="tns:FranvaroDB" />
+  <xs:complexType name="ArrayOfStatusLista">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusLista" nillable="true" type="tns:StatusLista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusLista" nillable="true" type="tns:ArrayOfStatusLista" />
+  <xs:complexType name="StatusLista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnstallningsID" type="xs:int" />
+      <xs:element minOccurs="0" name="Datum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FranvaroOrsak" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferensID" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fNamn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatusLista" nillable="true" type="tns:StatusLista" />
+</xs:schema>

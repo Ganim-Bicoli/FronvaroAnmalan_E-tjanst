@@ -1,0 +1,17 @@
+﻿body {
+
+}
+#StatusBar{
+    width:500px;
+    height:110px;
+    background-color:orange;
+
+    padding-top:5px;
+    list-style:none;
+    text-align:left;
+    
+}
+ul > li {
+    float:left;
+    padding-left:20px;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="359e32e5-6662-44c0-9f88-361fe583d9c3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62420/AnmalanService1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AnmalanService1.xsd" MetadataType="Schema" ID="408d4df5-af23-469a-a0eb-7fa687beb7af" SourceId="1" SourceUrl="http://localhost:62420/AnmalanService1.svc?xsd=xsd1" />
+    <MetadataFile FileName="AnmalanService1.disco" MetadataType="Disco" ID="7bbf55d0-185c-42b3-bf05-a4ff77470fed" SourceId="1" SourceUrl="http://localhost:62420/AnmalanService1.svc?disco" />
+    <MetadataFile FileName="AnmalanService11.xsd" MetadataType="Schema" ID="f5422ca4-f2cf-4bf2-a435-a95700692bcc" SourceId="1" SourceUrl="http://localhost:62420/AnmalanService1.svc?xsd=xsd2" />
+    <MetadataFile FileName="AnmalanService12.xsd" MetadataType="Schema" ID="5938f6a5-ab8e-46e6-9f74-35cef9cfe4b7" SourceId="1" SourceUrl="http://localhost:62420/AnmalanService1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="eb83f562-fef3-4d43-b41f-e3451994810a" SourceId="1" SourceUrl="http://localhost:62420/AnmalanService1.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
