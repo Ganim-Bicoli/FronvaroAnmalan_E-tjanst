@@ -13,8 +13,9 @@
 </head>
 
 <body>
-    <img id="imgBackground" src="~/Images/BackBild.png" alt="Bakgrundsbild" />
-
+    <img id="imgBackground" src="~/Images/inloggBakgrund.png" alt="Bakgrundsbild" />
+    <p id="BigText">University UNI</p>
+    <p id="SmalText">FrånvaroAnmälan</p>
 
     <div id="loginBar">
         <p id="LoggaIn">Logga In</p>
@@ -22,9 +23,11 @@
         @using (Html.BeginForm("Index", "Login"))
         {
             <p>@Html.TextBox("ansID", null, new { placeholder = "Username", @class = "loginRuta" })</p>
-            <p>@Html.TextBox("Password", null, new { placeholder = "Password", @class = "loginRuta" })</p>
-            <input type="submit" value="Logga in" />
+            <p>@Html.Password("Password", null, new { placeholder = "Password", @class = "loginRuta" })</p>
+            <input type="submit" value="Sign in" class="SumbitRuta" />
         }
+        <p class="GlömLösenord">Glöm lösenord?</p>
+        <hr id="HR-Line2" />
     </div>
 </body>
 </html>

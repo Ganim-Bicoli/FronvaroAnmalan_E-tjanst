@@ -4,6 +4,27 @@
     padding: 0px;
 }
 
+#BigText{
+    color:white;
+    font-weight:bold;
+    font-family:'Segoe UI';
+    font-size:85px;
+
+    position:absolute;
+    left:3%;
+    top:0px;
+}
+#SmalText {
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    font-size: 50px;
+    position: absolute;
+    left: 3%;
+    top: 150px;
+}
+
+
 #imgBackground {
     height: 969px;
     top: -15px;
@@ -26,11 +47,20 @@
 }
 
 #HR-Line {
-    border: 1.2px solid #67F9EA;
+    border: 1px solid #67F9EA;
     width: 280px;
     float: left;
     position: absolute;
     top: 150px;
+}
+#HR-Line2{
+    border: 1px solid #67F9EA;
+    width: 55%;
+    left:20%;
+    
+    
+    position: absolute;
+    top: 530px;
 }
 
 .loginRuta {
@@ -42,4 +72,34 @@
     color: black;
     font-size: 20px;
     padding-left: 10px;
+}
+.SumbitRuta {
+    top: 20px;
+    width: 160px;
+    height: 60px;
+    position: relative;
+    left: 35%;
+    border: none;
+    border-radius: 100px;
+    background-color: #8EFFF3;
+    font-size: 23px;
+    font-family: Segoe UI;
+    font-weight: bold;
+    color: #4B4B4B;
+    box-shadow: 0px 5px 1px #67F9EA;
+}
+
+.GlömLösenord {
+    top: 20px;
+    left: 38%;
+    position:relative;
+    font-size: 16px;
+    font-family: Segoe UI;
+    font-weight: bold;
+    color: #4B4B4B;
+    
+    width:130px;
+    height:20px;
+
+    
 }

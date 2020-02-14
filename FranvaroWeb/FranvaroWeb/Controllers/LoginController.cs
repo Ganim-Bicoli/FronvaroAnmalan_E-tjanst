@@ -26,26 +26,50 @@ namespace FranvaroWeb.Controllers
             FranvaroWeb.PersonalDBEntities db = new PersonalDBEntities();
             var funka = db.PersonalLista.ToList();
 
+            bool ScriptValidation = test(ansID,Password);
 
-
-            for (int i = 0; i < funka.Count(); i++)
+            if (ScriptValidation == true)
             {
-                if(funka[i].Fnamn.ToLower() == ansID.ToLower() && funka[i].Lösenord.ToLower() == Password.ToLower())
+                for (int i = 0; i < funka.Count(); i++)
                 {
-                    return RedirectToAction("Index", "Home", new { id = funka[i].AnställningsID });
+                    if (funka[i].Fnamn.ToLower() == ansID.ToLower() && funka[i].Lösenord.ToLower() == Password.ToLower())
+                    {
+                        return RedirectToAction("Index", "Home", new { id = funka[i].AnställningsID });
 
+                    }
                 }
             }
 
-            //foreach (var i in funka)
-            //{
-            //    if (i.Fnamn == ansID)  //TODO fixa inlogg åt användare, Anvnamn och Pass && i.Lösenord.ToLower() == Password.ToLower()
-            //    {
-            //        return RedirectToAction("Index", "Home", new { id = i.AnställningsID });
-            //    }
-            //}
+            return RedirectToAction("Index");
+        }
 
-            return View();
+        public  bool test(string username,string password)
+        {
+            char[] charUsername = username.ToCharArray();
+            char[] charPassword = password.ToCharArray();
+
+
+            for (int i = 0; i < username.Length; i++)
+            {
+                if (charUsername[i] == '<' || charUsername[i] == '=' || charUsername[i] == '>' || charUsername[i] == '*' || charUsername[i] == '!' || charUsername[i] == '&' || charUsername[i] == '(' || charUsername[i] == '/') 
+                {
+                    username = null;
+                    password = null;
+                    return false;
+                   
+                }
+            }
+            for (int i = 0; i < password.Length; i++)
+            {
+                if (charPassword[i] == '<' || charPassword[i] == '=' || charPassword[i] == '>' || charPassword[i] == '*' || charPassword[i] == '!' || charPassword[i] == '&' || charPassword[i] == '(' || charPassword[i] == '/')
+                {
+                    username = null;
+                    password = null;
+                    return false;
+
+                }
+            }
+            return true;
         }
     }
 }

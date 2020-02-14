@@ -14,13 +14,11 @@ namespace FranvaroWeb.Controllers
         // GET: AnställdHistorik
         public ActionResult Index(int id)
         {
+            
             List<FranvaroServiceReferance.FranvaroDB> test = new List<FranvaroServiceReferance.FranvaroDB>();
 
             test = klient.getSpecificAnmalan(id).ToList();
-         
 
-            
-            int a = id;
             return View(test);
         }
     }

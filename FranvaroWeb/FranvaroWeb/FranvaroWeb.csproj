@@ -136,6 +136,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
+    <Content Include="Images\inloggBakgrund.png" />
     <Content Include="PersonalDBModelEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PersonalDBModelEntity.Context.cs</LastGenOutput>
