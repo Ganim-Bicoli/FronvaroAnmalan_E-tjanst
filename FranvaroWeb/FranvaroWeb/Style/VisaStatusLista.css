@@ -13,7 +13,7 @@
     list-style: none;
     text-align: left;
     position: relative;
-    left: 55%;
+    left: 65%;
     top: 200px;
 }
 
@@ -40,7 +40,12 @@ div > p {
 
 #franVaroStatusDiv {
     position: relative;
+
+    width:300px;
+    height:100px;
+
     left: 52%;
+   
 }
 
 
@@ -103,7 +108,12 @@ div > p {
 #pStatus {
     position: absolute;
     top: 25px;
-    left: 25%;
+    left: 40%;
+}
+#pReferens {
+    position: absolute;
+    top: 45px;
+    left: 40%;
 }
 
 #pFranvaroText {

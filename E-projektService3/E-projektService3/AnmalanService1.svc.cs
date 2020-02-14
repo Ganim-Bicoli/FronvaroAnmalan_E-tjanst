@@ -59,7 +59,7 @@ namespace E_projektService3
                         returlist.Tid = i.Tid;
                         returlist.Datum = i.Datum;
                         Returdata.Add(returlist);
-                        break;
+                        
                     }
 
                 }
@@ -74,21 +74,30 @@ namespace E_projektService3
             {
                 var dbFranvaroList = db.Franvaro.ToList();
 
-                for (int i = 0; i < dbFranvaroList.Count(); i++)
-                {
-                    if (dbFranvaroList[i].AnstallningsID == id)
-                    {
-                        StatusLista templistan = new StatusLista();
-                        templistan.ReferensID = dbFranvaroList[i].ReferensID;
-                        templistan.fNamn = dbFranvaroList[i].fNamn;
-                        templistan.FranvaroOrsak = dbFranvaroList[i].FranvaroOrsak;
-                        templistan.Tid = dbFranvaroList[i].Tid;
-                        templistan.Datum = dbFranvaroList[i].Datum;
-                        templistan.Status = dbFranvaroList[i].Status;
-                        stLista.Add(templistan);
+                int visaAntalKolumn = 0;
 
+                for (int i = dbFranvaroList.Where(x => x.AnstallningsID == id).Count(); i > 0; i--)
+                {
+                    
+
+                    StatusLista templistan = new StatusLista();
+                    templistan.ReferensID = dbFranvaroList[i].ReferensID;
+                    templistan.fNamn = dbFranvaroList[i].fNamn;
+                    templistan.FranvaroOrsak = dbFranvaroList[i].FranvaroOrsak;
+                    templistan.Tid = dbFranvaroList[i].Tid;
+                    templistan.Datum = dbFranvaroList[i].Datum;
+                    templistan.Status = dbFranvaroList[i].Status;
+                    stLista.Add(templistan);
+
+                    visaAntalKolumn++;
+                    if(visaAntalKolumn == 4)
+                    {
+                        break;
                     }
+
+
                 }
+
                 return stLista;
 
             }

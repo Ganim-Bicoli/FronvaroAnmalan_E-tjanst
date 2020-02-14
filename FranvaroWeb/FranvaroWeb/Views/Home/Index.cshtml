@@ -39,6 +39,7 @@
                         <p id="pFranvaroText">Frånvaro</p>
                         <p id="pFranvaro">@category.FranvaroOrsak</p>
                         <p id="pStatus">@category.Status</p>
+                        <p id="pReferens">@category.ReferensID</p>
 
                     </div>
 
@@ -105,6 +106,9 @@
 
         }
 
+            <div>
+                @Html.ActionLink("Historik", "Index", "AnställdHistorik", new { id = Model.AnställningsID },null)
+            </div>
 
     </div>
 

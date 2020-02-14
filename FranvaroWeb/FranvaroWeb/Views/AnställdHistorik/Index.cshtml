@@ -1,0 +1,37 @@
+﻿@model List<FranvaroWeb.FranvaroServiceReferance.FranvaroDB>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            <div>
+                <ul>
+                    <li><p>@Model[i].ReferensID</p></li>
+                    <li><p>@Model[i].fNamn</p></li>
+                    <li> <p>@Model[i].eNamn</p></li>
+                    <li><p>@Model[i].Adress</p></li>
+                    <li> <p>@Model[i].E_post</p></li>
+                    <li><p>@Model[i].Telefonnummer</p></li>
+
+                    <li><p>@Model[i].AnstallningsID</p></li>
+                    <li><p>@Model[i].Datum</p></li>
+                    <li>  <p>@Model[i].Tid</p></li>
+                    <li>   <p>@Model[i].Status</p></li>
+                    <li> --------------------------------- </li>
+                </ul>
+            </div>
+        }
+
+    </div>
+</body>
+</html>
