@@ -1,17 +1,113 @@
 ﻿body {
-
+    background-color: #F6F7FB;
 }
-#StatusBar{
-    width:500px;
-    height:110px;
-    background-color:orange;
 
-    padding-top:5px;
-    list-style:none;
-    text-align:left;
-    
+#StatusBar {
+    width: 500px;
+    height: 110px;
+    background-color: white;
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: -5px 0px 0px #67F9EA;
+    margin-top: 20px;
+    list-style: none;
+    text-align: left;
+    position: relative;
+    left: 55%;
+    top: 200px;
 }
-ul > li {
-    float:left;
-    padding-left:20px;
+
+div > p {
+    float: left;
+    padding-left: 20px;
+    font-family: 'Segoe UI';
+}
+
+.vl {
+    border-left: 1px solid black;
+    border-radius: 1px;
+    height: 24px;
+    position: absolute;
+    left: 14%;
+    top: 23px;
+}
+
+
+#DatumDiv2 {
+    position: relative;
+    left: 30%;
+}
+
+#franVaroStatusDiv {
+    position: relative;
+    left: 52%;
+}
+
+
+#pFrånDag {
+    color: black;
+    font-size: 18px;
+    top: -15px;
+    position: absolute;
+}
+
+#pTillDag {
+    color: black;
+    font-size: 18px;
+    top: -15px;
+    position: absolute;
+}
+
+#datumDag1 {
+    color: #0F72E6;
+    font-size: 40px;
+    position: absolute;
+    font-weight: bold;
+    top: -18px;
+}
+
+#datumDag2 {
+    color: #0F72E6;
+    font-size: 40px;
+    position: absolute;
+    font-weight: bold;
+    top: -18px;
+}
+
+#pFrånDatum {
+    position: absolute;
+    top: 60%;
+    left: -9px;
+    font-size: 15px;
+}
+
+#pTillDatum {
+    position: absolute;
+    top: 65px;
+    left: -2.5%;
+    font-size: 15px;
+}
+
+#ptidFöre {
+    position: absolute;
+    top: 30px;
+    left: 11%;
+    font-size: 12px;
+}
+
+#pFranvaro {
+    position: absolute;
+    top: 25px;
+}
+
+#pStatus {
+    position: absolute;
+    top: 25px;
+    left: 25%;
+}
+
+#pFranvaroText {
+    position: relative;
+    font-size: 18px;
+    top: -15px;
 }

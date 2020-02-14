@@ -10,20 +10,40 @@
     <link href="~/Style/logInStyle.css" rel="stylesheet" />
     <link href="~/Style/VisaStatusLista.css" rel="stylesheet" />
     <title>Index</title>
-</head>
+</head> 
 <body>
     <div>
         @if (ViewBag.ListOfStatus != null)
         {
             foreach (var category in (ViewBag.ListOfStatus as List<FranvaroWeb.FranvaroServiceReferance.StatusLista>)) //https://forums.asp.net/t/1993233.aspx?mvc+iterate+viewbag+list från rion william
             {
-              <ul id="StatusBar">  
-                 <li>Anställnings ID: @category.AnstallningsID</li>     @*Todo: Fixa så att datum ser ut som AdobeXd, kolla om du kan ta ut bara dagar och sätta i P element och sen månad osv.*@
-                 <li>Förnamn: @category.fNamn</li>
-                 <li>Datum: @category.Datum</li>
-                 <li>Tid: @category.Tid</li>
-                 <li>Frånvaro orsak: @category.FranvaroOrsak</li>
-              </ul>
+                <div id="StatusBar">
+                    <div>
+                        <p id="pFrånDag">Från</p>
+                        <p id="datumDag1"> @category.Datum.Substring(8, 2) </p>
+                        <p id="pFrånDatum">@category.Datum.Substring(0, 10) </p>
+                        <p class="vl"></p>
+                        <p id="ptidFöre">@category.Tid</p>
+
+                    </div>
+
+                    <div id="DatumDiv2">
+                        <p id="pTillDag">Till</p>
+                        <p id="datumDag2">@category.Datum.Substring(21, 2)</p>
+                        <p id="pTillDatum">@category.Datum.Substring(13, 10) </p>
+
+                        <p class="vl"></p>
+                        <p id="ptidFöre">@category.Tid</p>
+                    </div>
+                    <div id="franVaroStatusDiv">
+                        <p id="pFranvaroText">Frånvaro</p>
+                        <p id="pFranvaro">@category.FranvaroOrsak</p>
+                        <p id="pStatus">@category.Status</p>
+
+                    </div>
+
+
+                </div>
 
             }
 
